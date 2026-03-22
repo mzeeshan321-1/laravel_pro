@@ -110,3 +110,8 @@ MIT License - feel free to use this project for learning and development purpose
 ---
 
 **Built as a learning project** to demonstrate Laravel best practices, role-based access control, and modern HR system architecture.
+
+⚠️ Project Focus: This is a dedicated HR Manager Dashboard
+All core functionalities and features are built specifically for HR department operations 
+and HR manager workflows. The system is optimized for managing employees, leaves, payroll, 
+and other HR-specific tasks.
