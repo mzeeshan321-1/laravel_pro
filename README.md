@@ -1,66 +1,112 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# HR Management Dashboard
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, multi-role HR management system built with Laravel that streamlines employee management, leave requests, and payroll operations.
 
-## About Laravel
+## Key Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Multi-Role Authentication**: Separate dashboards for Admin, HR Manager, and Employee with role-based access control
+- **Employee Management**: Complete CRUD operations for employee profiles, departments, and job positions
+- **Leave Management**: Employees can request leaves; HR managers can approve or reject requests
+- **Payroll System**: Track and manage employee payroll information
+- **Holiday Calendar**: Configure and manage company holidays
+- **Job History Tracking**: Maintain employee career progression and job changes
+- **Profile Management**: Users can update personal profiles and change passwords
+- **Real-time Dashboard**: Analytics and insights for HR managers
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Problem & Solution
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Problems Addressed
+1. **Fragmented HR Processes**: Manual, scattered employee data management across multiple systems
+2. **Inefficient Leave Approval**: No centralized workflow for leave requests leading to delays
+3. **Complex Payroll Operations**: Difficulty tracking and managing employee salaries and benefits
+4. **Limited Visibility**: HR managers lack real-time insights into workforce data
+5. **Role Management**: No clear separation of access and permissions between roles
 
-## Learning Laravel
+### Solutions Implemented
+- **Centralized Dashboard**: Unified platform for all HR operations with role-based views
+- **Automated Workflow**: Streamlined leave request and approval process with notifications
+- **Database-Driven Payroll**: Organized payroll management with proper data relationships
+- **Analytics Dashboard**: Real-time metrics and employee statistics for decision-making
+- **Middleware Protection**: Custom authentication middleware ensures only authorized users access role-specific features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Tech Stack
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| Layer | Technologies |
+|-------|--------------|
+| **Backend** | Laravel 11, PHP 8.2+ |
+| **Frontend** | Blade, Tailwind CSS, Alpine.js |
+| **Build Tool** | Vite |
+| **Database** | SQLite/MySQL |
+| **Authentication** | Laravel Breeze |
+| **Notifications** | PHP Flasher |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Quick Start
 
-## Laravel Sponsors
+```bash
+# Clone repository
+git clone <repository-url>
+cd laravel_pro
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# Install dependencies
+composer install
+npm install
 
-### Premium Partners
+# Environment setup
+cp .env.example .env
+php artisan key:generate
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+# Database setup
+php artisan migrate
 
-## Contributing
+# Build assets
+npm run build
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Run development server
+php artisan serve
+npm run dev
+```
 
-## Code of Conduct
+## Project Structure
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+laravel_pro/
+├── app/Http/Controllers/
+│   ├── hr_manager/          # HR Manager controllers
+│   ├── employee/            # Employee controllers
+│   └── admin/               # Admin controllers
+├── routes/
+│   ├── hr_manager_auth.php  # HR Manager routes
+│   ├── employee_auth.php    # Employee routes
+│   └── admin_auth.php       # Admin routes
+├── resources/views/
+│   ├── hr_manager/          # HR Manager templates
+│   ├── employee/            # Employee templates
+│   └── auth/                # Authentication views
+└── database/
+    ├── migrations/
+    └── seeders/
+```
 
-## Security Vulnerabilities
+## Access the Application
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+| Role | URL | Default Login |
+|------|-----|----------------|
+| **Admin** | `/admin/login` | Configure via migration |
+| **HR Manager** | `/hr-manager/login` | Configure via migration |
+| **Employee** | `/login` | Configure via migration |
+
+## Future Enhancements
+
+- Email notifications for leave requests
+- Advanced reporting and export features
+- Performance appraisal system
+- Attendance tracking module
+- Mobile app integration
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIT License - feel free to use this project for learning and development purposes.
+
+---
+
+**Built as a learning project** to demonstrate Laravel best practices, role-based access control, and modern HR system architecture.
