@@ -101,8 +101,7 @@ laravel_pro/
 - Advanced reporting and export features
 - Performance appraisal system
 - Attendance tracking module
-- Mobile app integration
-
+  
 ## License
 
 MIT License - feel free to use this project for learning and development purposes.
