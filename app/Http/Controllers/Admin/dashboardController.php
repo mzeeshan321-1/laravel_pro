@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class dashboardController extends Controller
@@ -20,8 +21,9 @@ class dashboardController extends Controller
      */
     public function create()
     {
+        $hrCount = User::where('role', 2)->count(); // 2: Hr_Manager
         
-        return view('admin.dashboard');
+        return view('admin.dashboard', compact('hrCount'));
     }
 
     /**
