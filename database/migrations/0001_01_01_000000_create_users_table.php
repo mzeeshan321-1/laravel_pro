@@ -39,10 +39,16 @@ return new class extends Migration
         });
 
         DB::table('users')->insert([
+            // [
+            //     'name' => 'Admin',
+            //     'email' => 'admin@example.com',
+            //     'role' => 1,
+            //     'password' => bcrypt('password'),
+            // ],
             [
-                'name' => 'Admin',
-                'email' => 'admin@example.com',
-                'role' => 1,
+                'name' => 'HR Manager',
+                'email' => 'hr_manager@example.com',
+                'role' => 2,
                 'password' => bcrypt('password'),
             ]
         ]);

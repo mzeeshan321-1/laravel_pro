@@ -18,13 +18,6 @@ use Illuminate\Support\Facades\DB;
 
 class dashboardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -99,4 +92,3 @@ class dashboardController extends Controller
         ));
     }
 }
-

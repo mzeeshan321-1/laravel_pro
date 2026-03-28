@@ -312,7 +312,9 @@ class EmployeesController extends Controller
                         unlink($imagePath); // Delete the image
                     }
                 }
-                $user->userInfo->delete();
+                if ($user->userInfo) {
+                    $user->userInfo->delete();
+                }
                 $user->delete();
             });
             flash()->options([
