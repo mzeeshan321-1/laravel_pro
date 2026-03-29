@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/aad5f5fb-4e30-46c6-b098-9e70436a282d
+
 # HR Management Dashboard
 
 A modern, multi-role HR management system built with Laravel that streamlines employee management, leave requests, and payroll operations.
@@ -114,3 +118,7 @@ MIT License - feel free to use this project for learning and development purpose
 All core functionalities and features are built specifically for HR department operations 
 and HR manager workflows. The system is optimized for managing employees, leaves, payroll, 
 and other HR-specific tasks.
+
+
+https://github.com/user-attachments/assets/5a977292-5c44-495e-a41e-19b504917ff6
+
