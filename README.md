@@ -34,9 +34,9 @@ A modern, multi-role HR management system built with Laravel that streamlines em
 | Layer | Technologies |
 |-------|--------------|
 | **Backend** | Laravel 11, PHP 8.2+ |
-| **Frontend** | Blade, Tailwind CSS, Alpine.js |
+| **Frontend** | Blade, Tailwind CSS |
 | **Build Tool** | Vite |
-| **Database** | SQLite/MySQL |
+| **Database** | MySQL |
 | **Authentication** | Laravel Breeze |
 | **Notifications** | PHP Flasher |
 
@@ -86,14 +86,6 @@ laravel_pro/
     ├── migrations/
     └── seeders/
 ```
-
-## Access the Application
-
-| Role | URL | Default Login |
-|------|-----|----------------|
-| **Admin** | `/admin/login` | Configure via migration |
-| **HR Manager** | `/hr-manager/login` | Configure via migration |
-| **Employee** | `/login` | Configure via migration |
 
 ## Future Enhancements
 
